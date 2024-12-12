@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-container {
+    width: 35%;
+    height: 7vh;
+    border: 1px solid black;
+}
+
+.sign {
+    border: none;
+    background-color: transparent;
+    margin: 0 auto;
+    width: 100%;
+    font-size: 20px;
+}
+
+
+.actions-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+}

@@ -1,0 +1,14 @@
+.grid { 
+    display: grid;
+    gap: 5px
+}
+.cell {
+    display: flex;
+    border: 1px solid black;
+    width: 50px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 5px;
+}

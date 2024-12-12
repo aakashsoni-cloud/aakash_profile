@@ -1,0 +1,29 @@
+.carousel-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.image-container{
+    height: 100%;
+    width: 100%;
+}
+
+.left-btn,
+.right-btn  {
+    position: absolute;
+    top: 50%;
+    padding: 10px;
+    background-color: gray;
+    color: white;
+}
+
+.left-btn {
+    left: 1rem;
+}
+
+.right-btn {
+    right: 1rem;
+}

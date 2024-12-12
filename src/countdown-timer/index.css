@@ -1,0 +1,42 @@
+.countdown-timer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.timer-container {
+    height: 50px;
+}
+
+.timer-heading-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.heading {
+    margin: 20px;
+    padding-left: 25px;
+    text-align: center;
+    font-size: 18px;
+}
+
+input {
+    margin: 10px;
+    width: 10%;
+    height: 100%;
+    text-align: center;
+    border: none;
+    background-color: transparent;
+    font-size: 20px;
+}
+
+.button-container {
+    margin: 30px;
+}
+
+button {
+    margin: 20px;
+}
