@@ -35,7 +35,9 @@
 }
 
 .error {
-    font-color: red;
+    margin-top: 10px;
+    width: 100%;
+    color: red;
 }
 
 .todo-list-container {
@@ -46,7 +48,7 @@
 .item-container {
     display: flex;
     flex-direction: row;
-    margin: 10px;
+    margin: 20px;
     width: 100%;
     align-items: center;
     justify-content: space-between;
@@ -54,14 +56,18 @@
 
 .todo-item {
     width: 100%;
-    margin: 10px auto;
-    padding: 0.6em 1.2em;
+    margin: 15px auto;
+    padding: 0.6em 1.5em;
     background: lightgray;
     color: black;
     font-size: 12px;
     border-radius: 20px;
     font-weight: 500;
     font-family: inherit;
+}
+
+.todo-item.completed {
+    text-decoration: line-through;
 }
 
 .action-buttons {
@@ -76,6 +82,14 @@
     margin: 5px;
 }
 
+.delete-button.disabled {
+    cursor: not-allowed;
+}
+
 .edit-button {
     margin: 10px;
+}
+
+.edit-button.disabled {
+    cursor: not-allowed;
 }

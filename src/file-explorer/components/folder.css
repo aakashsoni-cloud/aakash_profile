@@ -1,0 +1,47 @@
+.folder {
+    margin-top: 6px;
+    background-color: rgb(74, 64,64);
+    display: flex;
+    justify-content: space-between;
+    padding: 3px;
+    width: 300px;
+    cursor: pointer;
+}
+
+.folder > span {
+    margin: 0 5px 2px 0;
+}
+
+.file {
+    margin-top: 5px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer {
+    display: flex;
+    align-items: center;
+    grid: 10px;
+}
+
+.inputContainer > span {
+   margin-top: 5px;
+}
+
+.inputContainer_input {
+    font-size: 15px;
+    margin: 5px 0 0 5px;
+    padding: 5px;
+    border: 1px solid lightgray;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+} 
+
+.folder > div > button {
+    font-size: 10px;
+    background-color: transparent;
+    border: peachpuff 1px solid;
+    margin: 0px;
+}

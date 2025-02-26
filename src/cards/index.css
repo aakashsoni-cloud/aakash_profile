@@ -1,0 +1,35 @@
+* {
+    box-sizing: border-box !important;
+}
+
+.app-header {
+    background: black !important;
+    display: flex !important;
+}
+
+.card-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.w-mx-1200 {
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+}
+
+.gap-30 {
+    gap: 10px;
+}
+
+.card {
+    background-color: #4d5853;
+    border: 1px solid #ddd;
+    width: 300px;
+    padding: 20px;
+}
+
+.w-300 {
+    width: 300px;
+}
