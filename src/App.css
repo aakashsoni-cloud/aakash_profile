@@ -5,6 +5,20 @@
   text-align: center;
 }
 
+[data-theme="dark"] {
+  --bg-color: #242424;
+  --text-color: #fff;
+
+  --background-color: #444;
+  --button-text: var(--text-color);
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

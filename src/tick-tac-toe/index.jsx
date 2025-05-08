@@ -2,30 +2,52 @@ import { useState } from "react";
 import Navigation from "../navigation";
 import "./index.css";
 import Board from "./board";
+import { checkWinner } from "../utils/ticktocktoeUtils";
 
 // eslint-disable-next-line react/prop-types
 const TicTacToe = ({ size = 3 }) => {
   const [board, setBoard] = useState(
-    Array.from(Array(size).fill(null), () => Array(size).fill(null))
+    Array.from({ length: size }, () => Array(size).fill(null))
   );
 
-  const [player, setPlayer] = useState("X");
+  const [playerTurn, setPlayerTurn] = useState(false);
 
-  const handleClick = () => {
-    setPlayer(player === "X" ? "O" : "X");
+  const winner = checkWinner(board, size);
+  console.log(winner);
+  const status = winner
+    ? `Winner is ${winner}`
+    : playerTurn
+    ? "Next player is X"
+    : "Next player is  O";
+
+  const handleClick = (rowIndex, colIndex) => {
+    if (board[rowIndex][colIndex] || winner) {
+      return;
+    }
+    const deepCopyBoard = JSON.parse(JSON.stringify(board));
+    deepCopyBoard[rowIndex][colIndex] = playerTurn ? "X" : "O";
+    setBoard(deepCopyBoard);
+    setPlayerTurn(!playerTurn);
   };
 
   const handleReset = () => {
-    setBoard(Array.from(Array(size).fill(null), () => Array(size).fill(null)));
+    setBoard(() => {
+      return Array.from(Array(size).fill(null), () => Array(size).fill(null));
+    });
   };
 
   return (
     <div className="container">
       <Navigation />
       <h3>Play Tick-Tac-Toe</h3>
-      <Board size={size} board={board} handleClick={handleClick} />
+      <Board
+        size={size}
+        board={board}
+        handleClick={handleClick}
+        winner={winner}
+      />
       <div className="actions-container">
-        <div>{`Player turn:  ${player}`}</div>
+        <div>{status}</div>
         <button onClick={handleReset}>Reset</button>
       </div>
     </div>

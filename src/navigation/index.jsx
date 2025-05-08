@@ -20,6 +20,12 @@ const Navigation = () => {
           <Link className="link" to="/todo">
             Todo
           </Link>
+          <Link className="link" to="/learn-countdown-timer">
+            CountDownTimer
+          </Link>
+          <Link className="link" to="/grid-flex">
+            GridFlex
+          </Link>
         </div>
 
         <div className="hamburger-menu">
@@ -63,6 +69,9 @@ const Navigation = () => {
             <Link className="link" to="/stars" onClick={() => setIsOpen(false)}>
               Stars
             </Link>
+            <Link className="link" to="/hooks" onClick={() => setIsOpen(false)}>
+              Hooks
+            </Link>
             <Link
               className="link"
               to="/digital-clock"
@@ -77,6 +86,15 @@ const Navigation = () => {
             </Link>
             <Link className="link" to="/cards" onClick={() => setIsOpen(false)}>
               Cards
+            </Link>
+            <Link className="link" to="/otp" onClick={() => setIsOpen(false)}>
+              OTP
+            </Link>
+            <Link
+              className="link"
+              to="/comments"
+              onClick={() => setIsOpen(false)}>
+              Comments
             </Link>
           </div>
         </div>
